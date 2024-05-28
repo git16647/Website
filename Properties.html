@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="MyFaunction.js"></script>
+
+  <title>Properties</title>
+
+</head>
+
+<body onload="generate_captcha()">
+  <h1>العقارات</h1>
+  <table id="table" border="3px">
+    <tr id="tr">
+      <th>المدينة</th>
+      <th>تفاصيل</th>
+      <th>الايجار الشهري</th>
+      <th>إظهار التفاصيل</th>
+      <th>اختيار</th>
+    </tr>
+    <tr>
+      <td id="city">دمشق </td>
+      <td id="det">شقة غرفة وصالة مساحة 70م </td>
+      <td id="rent">300000 ل.س</td>
+      <td><input type="checkbox" id="showDetails" onchange="toggleDetails()"></td>
+      <td> <input type="radio" name="choose" value="1" id="1"></td>
+    <tr id="hidden" hidden>
+      <td>المنطقة:ركن الدين</td>
+      <td>متوفر كراج</td>
+      <td>الطابق الثالث</td>
+      <td>الملكية: طابو</td>
+      <td>بلكون مساحة 12 متر</td>
+      <td>مفروشة</td>
+      <td><img src="img/1 (1).webp" width="100px" height="100px" alt="no-img"></td>
+      <td><img src="img/1 (2).webp" width="100px" height="100" alt="no-img"></td>
+      <td><img src="img/1 (3).webp" width="100" height="100" alt="no-img"></td>
+    </tr>
+    </tr>
+
+    <tr>
+      <td>دمشق </td>
+      <td>بيت 4غرف النوم, 5 حمامات</td>
+      <td>30000000 ل.س</td>
+      <td><input type="checkbox" id="showDetails1" onchange="toggleDetails1()"></td>
+      <td> <input type="radio" name="choose" value="2" id="2"></td>
+    <tr id="hidden1" hidden>
+      <td>المنطقة:مشروع دمر</td>
+      <td>متوفر كراج</td>
+      <td>الطابق الارضي</td>
+      <td>الملكية: طابو</td>
+      <td>بلكون </td>
+      <td>مفروشة</td>
+      <td><img src="img/3 (1).jpg" width="100px" height="100px" alt="no-img"></td>
+      <td><img src="img/3 (2).jpg" width="100px" height="100" alt="no-img"></td>
+    </tr>
+    </tr>
+
+    <tr>
+      <td>حمص </td>
+      <td>شقة غرفتين مساحة 100م </td>
+      <td>2000000 ل.س</td>
+      <td><input type="checkbox" id="showDetails2" onchange="toggleDetails2()"></td>
+      <td> <input type="radio" name="choose" value="3" id="3"></td>
+    <tr id="hidden2" hidden>
+      <td>المنطقة:بابا عمرو </td>
+      <td>متوفر كراج</td>
+      <td>الطابق الخامس</td>
+      <td>الملكية: طابو</td>
+      <td>بلكون مساحة 15 متر</td>
+      <td>مفروشة</td>
+      <td><img src="img/2 (1).webp" width="100px" height="100px" alt="no-img"></td>
+      <td><img src="img/2 (2).webp" width="100px" height="100" alt="no-img"></td>
+      <td><img src="img/2 (3).webp" width="100" height="100" alt="no-img"></td>
+    </tr>
+    </tr>
+    <tr>
+      <td>ريف دمشق </td>
+      <td>بيت مساحة 110 م</td>
+      <td>2500000 ل.س</td>
+      <td><input type="checkbox" id="showDetails3" onchange="toggleDetails3()"></td>
+      <td> <input type="radio" name="choose" value="4" id="4"></td>
+    <tr id="hidden3" hidden>
+      <td>المنطقة:ريف دمشق</td>
+      <td>غير متوفر كراج</td>
+      <td>الطابق الارضي</td>
+      <td>الملكية: طابو</td>
+      <td>يوجد جنينة </td>
+      <td>مفروش</td>
+      <td><img src="img/3 (1).jpg" width="100px" height="100px" alt="no-img"></td>
+      <td><img src="img/3 (2).jpg" width="100px" height="100" alt="no-img"></td>
+    </tr>
+    </tr>
+    <tr>
+      <td>دمشق </td>
+      <td>شقة غرفتين وصالة مساحة 200م </td>
+      <td>6000000 ل.س</td>
+      <td><input type="checkbox" id="showDetails4" onchange="toggleDetails4()"></td>
+      <td> <input type="radio" name="choose" value="5" id="5"></td>
+    <tr id="hidden4" hidden>
+      <td>المنطقة:كفرسوسة</td>
+      <td>متوفر كراج</td>
+      <td>الطابق الرابع</td>
+      <td>الملكية: طابو</td>
+      <td>لا يوجد بلكون</td>
+      <td>مفروشة</td>
+      <td><img src="img/4 (1).jpg" width="100px" height="100px" alt="no-img"></td>
+      <td><img src="img/4 (2).jpg" width="100px" height="100" alt="no-img"></td>
+    </tr>
+    </tr>
+    <tr>
+      <td>دمشق </td>
+      <td>مكتب غرفتين مساحة 70م</td>
+      <td>15000000 ل.س</td>
+      <td><input type="checkbox" id="showDetails5" onchange="toggleDetails5()"></td>
+      <td> <input type="radio" name="choose" value="6"></td>
+    <tr id="hidden5" hidden>
+      <td>المنطقة:ساحة عرنوس</td>
+      <td>متوفر اصنصير</td>
+      <td>الطابق العاشر</td>
+      <td>الملكية: طابو</td>
+      <td>لا يوجد بلكون</td>
+      <td>غير مفروش</td>
+      <td><img src="img/5 (1).jpg" width="100px" height="100px" alt="no-img"></td>
+      <td><img src="img/5 (2).jpg" width="100px" height="100" alt="no-img"></td>
+      <td><img src="img/5 (3).jpg" width="100" height="100" alt="no-img"></td>
+    </tr>
+    </tr>
+    <tr>
+      <td>حلب </td>
+      <td>شقة غرفة وحدة مساحة 60 م</td>
+      <td>100000 ل.س</td>
+      <td><input type="checkbox" id="showDetails6" onchange="toggleDetails6()"></td>
+      <td> <input type="radio" name="choose" value="7"></td>
+    <tr id="hidden6" hidden>
+      <td>المنطقة:عفرين</td>
+      <td>غير متوفر كراج</td>
+      <td>الطابق الاول</td>
+      <td>الملكية: طابو</td>
+      <td>بلكون </td>
+      <td>غير مفروشة</td>
+      <td><img src="img/6 (1).jpg" width="100px" height="100px" alt="no-img"></td>
+      <td><img src="img/6 (2).jpg" width="100px" height="100" alt="no-img"></td>
+    </tr>
+    </tr>
+    <tr>
+      <td>دمشق </td>
+      <td>مكتب مساحة 100م</td>
+      <td>4100000 ل.س</td>
+      <td><input type="checkbox" id="showDetails7" onchange="toggleDetails7()"></td>
+      <td> <input type="radio" name="choose" value="8"></td>
+    <tr id="hidden7" hidden>
+      <td>المنطقة:الحمرا</td>
+      <td>متوفر اصنصير</td>
+      <td>الطابق الخامس</td>
+      <td>الملكية: طابو</td>
+      <td>بلكون مساحة 15 متر</td>
+      <td>مفروش</td>
+      <td><img src="img/7 (1).jpg" width="100px" height="100px" alt="no-img"></td>
+      <td><img src="img/7 (2).jpg" width="100px" height="100" alt="no-img"></td>
+      <td><img src="img/7 (3).jpg" width="100" height="100" alt="no-img"></td>
+    </tr>
+    </tr>
+    <tr>
+      <td>دمشق </td>
+      <td>شقة غرفتين وصالة مساحة 300م </td>
+      <td>6000000 ل.س</td>
+      <td><input type="checkbox" id="showDetails8" onchange="toggleDetails8()"></td>
+      <td> <input type="radio" name="choose" value="9"></td>
+    <tr id="hidden8" hidden>
+      <td>المنطقة:دمر</td>
+      <td>متوفر كراج</td>
+      <td>الطابق الحادي عشر</td>
+      <td>الملكية: طابو</td>
+      <td>بلكون </td>
+      <td>غير مفروشة</td>
+      <td><img src="img/8 (1).jpg" width="100px" height="100px" alt="no-img"></td>
+      <td><img src="img/8 (2).jpg" width="100px" height="100" alt="no-img"></td>
+      <td><img src="img/8 (3).jpg" width="100" height="100" alt="no-img"></td>
+    </tr>
+    </tr>
+    <tr>
+      <td>دمشق </td>
+      <td>شقة غرفة وصالة مساحة 80م </td>
+      <td>2400000 ل.س</td>
+      <td><input type="checkbox" id="showDetails9" onchange="toggleDetails9()"></td>
+      <td> <input type="radio" name="choose" value="10"></td>
+    <tr id="hidden9" hidden>
+      <td>المنطقة: الميدان</td>
+      <td>غير متوفر كراج</td>
+      <td>الطابق الثاني</td>
+      <td>الملكية: طابو</td>
+      <td>فناء خلفي</td>
+      <td>غير مفروشة</td>
+      <td><img src="img/9 (1).jpg" width="100px" height="100px" alt="no-img"></td>
+      <td><img src="img/9 (2).jpg" width="100px" height="100" alt="no-img"></td>
+      <td><img src="img/9 (3).jpg" width="100" height="100" alt="no-img"></td>
+    </tr>
+    </tr>
+  </table>
+
+
+  <form id="form" style="display: none;" onsubmit="event.preventDefault(); number_correct(); national(); check_captcha()">
+    <div>
+      <label for="fn">الاسم الكامل لمقدم الطلب</label><br>
+      <input type="text" id="fn" onclick="validateArabicName()">
+    </div>
+    <div><label for="id">الرقم الوطني</label><br>
+      <input type="number" id="id" required onclick="national()">
+    </div>
+    <div>
+      <label for="date">تاريخ الولادة </label><br>
+      <input type="date" id="date">
+    </div>
+    <div>
+      <label for="phone">رقم الموبايل</label><br>
+      <input type="number" id="phone" placeholder="995495082" onclick="number_corect()">
+    </div>
+    <div>
+      <label for="mail">الايميل</label><br>
+      <input type="email" id="mail" onclick="validateEmail()">
+    </div>
+    <br>
+    <label id="captcha" class="captcha" name="mycaptcha"></label>
+    <br><br>
+    <input type="text" id="cood_id" placeholder="ادخل رمز التحقق" class="margbu">
+    <input type="button" value="&#128257;" class="emoji" name="refreh_js" onclick="generate_captcha()">
+    <br><br>
+  <button class="btn" onclick="showPropertyDetails()">إرسال</button>
+<br><br>
+</form>
+  <button class="btn" onclick="toggle()">متابعة</button>
+  </div> <br><br><br>
+  <a href="home.html" >Home </a>
+  <a href="AboutUs.html" >من نحن</a>
+</body>
+</html>
